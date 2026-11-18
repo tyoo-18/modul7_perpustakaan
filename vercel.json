@@ -1,7 +1,6 @@
 {
   "version": 2,
   "framework": "laravel",
-  "public": "public",
   "functions": {
     "api/index.php": {
       "maxDuration": 60
