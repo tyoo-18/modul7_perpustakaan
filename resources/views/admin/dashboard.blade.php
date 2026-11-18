@@ -42,11 +42,9 @@
         </div>
 
         <!-- Contoh yang benar -->
-        <form action="{{ route('logout') }}" method="POST" class="inline">
+        <form action="{{ route('custom.logout') }}" method="POST">
             @csrf
-            <button type="submit" class="text-red-500 hover:underline">
-                Logout
-            </button>
+            <button type="submit">Logout</button>
         </form>
     </div>
 </body>

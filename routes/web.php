@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Buku;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\PeminjamanController;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -19,6 +20,12 @@ Route::get('/tes-error', function () {
     throw new \RuntimeException('Uji coba error sistem');
 });
 
+Route::post('/custom-logout', function (Request $request) {
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/login');
+})->name('custom.logout');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
