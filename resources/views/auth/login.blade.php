@@ -2,9 +2,9 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ secure_url('login') }}">
+    <form method="POST" action="{{ route('login') }}">
         @csrf
-        
+
         <h2 class="text-xl font-bold">Login Sistem Perpustakaan - 250441100031</h2>
         <!-- Email Address -->
         <div>
