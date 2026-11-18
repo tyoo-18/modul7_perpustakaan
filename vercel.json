@@ -1,5 +1,10 @@
 {
   "version": 2,
+  "functions": {
+    "api/index.php": {
+      "maxDuration": 60
+    }
+  },
   "routes": [
     { "src": "/css/(.*)", "dest": "/public/css/$1" },
     { "src": "/js/(.*)", "dest": "/public/js/$1" },
