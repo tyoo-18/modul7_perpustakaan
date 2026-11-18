@@ -41,9 +41,11 @@
             <a href="{{ route('buku.index') }}" class="btn" style="background:#28a745;">📚 Kelola Data Buku</a>
         </div>
 
-        <form action="{{ route('logout') }}" method="POST">
+        <form action="{{ route('logout') }}" method="POST" class="inline">
             @csrf
-            <button type="submit">Logout</button>
+            <button type="submit" class="text-red-500 hover:underline">
+                Logout
+            </button>
         </form>
     </div>
 </body>
